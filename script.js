@@ -8,7 +8,7 @@ let spawnInterval;          // Holds the interval for spawning items
 function createGrid() {
   const grid = document.querySelector('.game-grid');
   grid.innerHTML = ''; // Clear any existing grid cells
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 100; i++) {
     const cell = document.createElement('div');
     cell.className = 'grid-cell'; // Each cell represents a grid square
     grid.appendChild(cell);
