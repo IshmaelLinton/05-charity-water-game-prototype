@@ -78,22 +78,21 @@ h1 img {
 .game-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  gap: 0px;
-  margin: 0 auto;
-  margin-top: 100px;
   width: 315px;
   height: 512px;
-  align-content: end;
-}
-.game-grid {
-  /* ...existing code... */
-  background-image: url('img/Background.png'); /* Path to your PNG file */
-  background-size: contain; /* Make the image cover the whole grid */
-  background-position: center; /* Center the image */
+  margin: 2em auto;           /* Center the grid vertically and horizontally */
+  padding: 40px 40px 10px;
+  position: relative;         /* Needed for absolute positioning of floating elements */
+  background-image: url('img/Background.png');
+  background-size: contain;   /* Make the image fit inside the grid area */
+  background-position: center;
+  background-repeat: no-repeat;
+  align-content: center;
+  gap: 6px;                   /* Adds spacing between grid cells */
 }
 .grid-cell {
-  background-color: #e8e8e8;
-  border-radius: 8px;
+  background-color: #00000000;
+  border-radius: 0px;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
@@ -109,8 +108,8 @@ h1 img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70px;
-  height: 70px;
+  width: 3em;
+  height: 3em;
   /* Ensure the wrapper is properly centered */
 }
 
@@ -123,8 +122,10 @@ h1 img {
   background-position: center;
   cursor: pointer;
   border-radius: 50%;
-  animation: popUp 0.5s cubic-bezier(0.17, 0.67, 0.34, 2);
+  animation: popUp 3.0s cubic-bezier(0.17, 0.67, 0.34, 2);
   transform-origin: center; /* Ensure scaling happens from the center */
+  opacity: 1;
+  transition: opacity 0.8s;
 }
 
 
