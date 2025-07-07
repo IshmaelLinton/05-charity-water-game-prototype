@@ -1,3 +1,42 @@
+/* Nav Bar Styles */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background: #fff;
+  border-bottom: 1.5px solid #cbccd1;
+  display: flex;
+  align-items: center;
+  padding: 0.5em 1.5em;
+  box-sizing: border-box;
+  margin: 0;
+  z-index: 1000;
+}
+
+body {
+  /* Add padding to prevent content from hiding under the fixed navbar */
+  padding-top: 3.5em;
+}
+
+.navbar-logo {
+  height: 1.2em;
+  width: 10.17em;
+  display: block;
+  margin-left: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    justify-content: center;
+  }
+  .navbar-logo {
+    margin-left: 0;
+  }
+}
 /* Charity: water Brand Colors & Fonts
 
 Primary Colors:
@@ -23,54 +62,75 @@ Fonts:
 }
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 30px;
-  background-color: #f0f0f0;
-  color: #333;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  margin: 0em;
+  padding: 1em;
+  background-color: #fff7e1;
+}
+
+.container,
+.stats,
+.stats p,
+.game-instructions,
+.game-grid,
+button,
+.grid-cell {
+  font-family: 'Proxima Nova', Arial, sans-serif;
 }
 
 .container {
-  max-width: 750px;
-  margin: 50px auto;
-  background-color: #fff;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 28em;
+  min-width: 22em;
+  margin: 4em auto;
+  background-color: #77a8bb;
+  padding: .5em;
+  border-radius: .6em;
+  /* Very subtle drop shadow for depth */
+  box-shadow: 0 .1em .1em 0 rgba(0, 0, 0, 0.336);
 }
 
 h1 {
   text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 20px;
-  color: #333;
+  font-size: 2.0em;
+  font-weight: 400; /* Make the font thinner */
+  margin-bottom: .5em;
+  color: #ffffff;
+  font-family: 'Kazimir Text', serif;
+  font-style: normal;
 }
 
 h1 img {
-  height: 50px;
-  margin-right: 15px;
+  height: 3em;
+  margin-right: 3em;
   display: block;
 }
 
 .game-instructions {
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-size: 1.0em;
+  margin-bottom: 1em;
   text-align: center;
+  color: #ffffff; /* Charity: water blue for emphasis */
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
 }
 
 .stats {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
-  background-color: #f5f5f5;
-  padding: 15px 0;
-  border-radius: 8px;
+  justify-content: space-evenly;
+  margin-bottom: 0.1em; /* Reduced space below stats */
+  margin-left: 3em;
+  margin-right: 3em;
+  padding: .5em 0;
+  border-radius: 0.4em;
+  background-color: #FFC907;
+  color: rgb(26, 26, 26);
+  border: .1em solid;
 }
 
 .stats p {
   margin: 0;
-  font-size: 18px;
+  font-size: 0.7em;
   font-weight: bold;
   color: #333;
 }
@@ -78,17 +138,17 @@ h1 img {
 .game-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  width: 315px;
-  height: 512px;
-  margin: 2em auto;           /* Center the grid vertically and horizontally */
-  padding: 40px 40px 10px;
-  position: relative;         /* Needed for absolute positioning of floating elements */
+  width: 21em;
+  height: 35em;
+  margin: 0.1em auto 0.2em auto; /* Less space above and below grid */
+  padding: 0.7em 1em 2em;
+  position: static;         /* Needed for absolute positioning of floating elements */
   background-image: url('img/Background.png');
   background-size: contain;   /* Make the image fit inside the grid area */
   background-position: center;
   background-repeat: no-repeat;
   align-content: center;
-  gap: 6px;                   /* Adds spacing between grid cells */
+  gap: .2em;                   /* Adds spacing between grid cells */
 }
 .grid-cell {
   background-color: #00000000;
@@ -108,21 +168,21 @@ h1 img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 3em;
-  height: 3em;
+  width: 4em;
+  height: 7em;
   /* Ensure the wrapper is properly centered */
 }
 
 .water-can {
   width: 100%;
   height: 100%;
-  background-image: url('img/water-can.png');
+  background-image: url('img/waterdroplet.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  border-radius: 50%;
-  animation: popUp 3.0s cubic-bezier(0.17, 0.67, 0.34, 2);
+  border-radius: 0%;
+  animation: popUp 6.0s cubic-bezier(0.17, 0.67, 0.34, 2);
   transform-origin: center; /* Ensure scaling happens from the center */
   opacity: 1;
   transition: opacity 0.8s;
@@ -133,7 +193,7 @@ h1 img {
 
 @keyframes popUp {
   0% {
-    transform: scale(0.5); /* Start scaling from the center */
+    transform: scale(0.7); /* Start scaling from the center */
   }
   100% {
     transform: scale(1); /* End scaling at full size */
@@ -142,14 +202,15 @@ h1 img {
 
 
 button {
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  border-radius: 8px;
+  background-color: #FFC907;
+  color: rgb(26, 26, 26);
+  border: .1em solid;
+  padding: .7em 2.4em;
+  font-size: 1.0em;
+  font-weight: bold;
+  border-radius: 0.3em;
   cursor: pointer;
   display: block;
-  margin: 30px auto 0;
+  margin: 0em auto .8em;
   transition: background-color 0.2s;
 }

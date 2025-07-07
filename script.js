@@ -2,13 +2,16 @@
 const GOAL_CANS = 25;        // Total items needed to collect
 let currentCans = 0;         // Current number of items collected
 let gameActive = false;      // Tracks if game is currently running
-let spawnInterval;          // Holds the interval for spawning items
+let spawnInterval;           // Holds the interval for spawning items
+let timerInterval;           // Holds the interval for the countdown timer
+const GAME_TIME = 30;        // Total game time in seconds
+let timeLeft = GAME_TIME;    // Time left in the game
 
-// Creates the 3x3 game grid where items will appear
+// Creates the 10x10 game grid where items will appear
 function createGrid() {
   const grid = document.querySelector('.game-grid');
   grid.innerHTML = ''; // Clear any existing grid cells
-  for (let i = 0; i < 140; i++) {
+  for (let i = 0; i < 100; i++) {
     const cell = document.createElement('div');
     cell.className = 'grid-cell'; // Each cell represents a grid square
     grid.appendChild(cell);
@@ -74,17 +77,46 @@ function spawnWaterCan() {
   });
 }
 
+// Function to update the timer display
+function updateTimerDisplay() {
+  document.getElementById('timer').textContent = timeLeft;
+}
+
 // Initializes and starts a new game
 function startGame() {
   if (gameActive) return; // Prevent starting a new game if one is already active
   gameActive = true;
+  currentCans = 0;
+  timeLeft = GAME_TIME;
+  document.getElementById('current-cans').textContent = currentCans;
+  updateTimerDisplay();
   createGrid(); // Set up the game grid
-  spawnInterval = setInterval(spawnWaterCan, 1000); // Spawn water cans every second
+
+  // Start spawning water cans every second
+  spawnInterval = setInterval(spawnWaterCan, 1000);
+
+  // Start the countdown timer
+  timerInterval = setInterval(() => {
+    timeLeft -= 1;
+    updateTimerDisplay();
+    // If time runs out, end the game
+    if (timeLeft <= 0) {
+      endGame();
+    }
+  }, 1000);
 }
 
+// Ends the game and stops all intervals
 function endGame() {
   gameActive = false; // Mark the game as inactive
   clearInterval(spawnInterval); // Stop spawning water cans
+  clearInterval(timerInterval); // Stop the timer
+
+  // Optionally, remove any remaining water can
+  const existingCan = document.querySelector('.floating-water-can');
+  if (existingCan) {
+    existingCan.remove();
+  }
 }
 
 // Set up click handler for the start button
