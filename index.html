@@ -13,15 +13,103 @@
   </nav>
   <div class="container">
     <h1>By The Jerry-Full</h1>
-    <p class="game-instructions">Collect 20 items to complete the game!</p>
+    <p class="game-instructions">Click water drops to fill the jerry-can,
+      
+      Avoid the polluted drops or the whole can has to be dumped!
+      <br>
+      Try to collect 60 liters!
+    </p>
     <div class="stats">
       <p>L I T E R S: <span id="current-cans">0</span></p>
-      <p>T I M E: <span id="timer">30</span>s</p>
+      <p>T I M E: <span id="timer">60</span>s</p>
     </div>
     <div id="achievements" class="achievement"></div>
-    <div class="game-grid"></div>
-    <button id="start-game">START GAME</button>
+    <!-- Win box overlay (hidden by default) -->
+    <div id="win-overlay" class="win-overlay" style="display:none;">
+      <div class="win-box">
+        <button class="win-close-btn" id="win-close-btn" title="Close">&times;</button>
+        <img src="img/cw_logo_horizontal.png" alt="Charity: water logo" class="win-logo">
+        <h2 id="win-title">Congratulations!</h2>
+        <p id="win-message">You collected 60 liters or more and won!</p>
+        <button id="play-again" class="play-again-btn">PLAY AGAIN</button>
+      </div>
+    </div>
+    <div class="game-grid-wrapper">
+      <div class="game-grid"></div>
+      <img src="img/jerr-can.png" alt="Jerry Can" class="jerr-can-overlay">
+    </div>
+    <div class="difficulty-btn-row" id="difficulty-btn-row">
+      <button class="difficulty-btn" id="easy-btn">EASY</button>
+      <button class="difficulty-btn" id="intermediate-btn">INTERMEDIATE</button>
+      <button class="difficulty-btn" id="hard-btn">HARD</button>
+    </div>
   </div>
   <script src="script.js"></script>
+  <footer class="cw-footer">
+    <div class="footer-content">
+      <div class="footer-top-row">
+        <div class="footer-newsletter">
+          <h3 class="footer-heading">Add Impact To Your Inbox</h3>
+          <p class="footer-sub">Get our emails to stay in the know.</p>
+          <form class="footer-form">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+            <input type="email" placeholder="Email" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="footer-disclaimer">By clicking “Subscribe”, you are submitting your information to charity: water.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-links-col">
+            <h4>Take Action</h4>
+            <ul>
+              <li><a href="https://www.charitywater.org/donate">Give</a></li>
+              <li><a href="https://www.charitywater.org/donate/the-spring">Join the Spring</a></li>
+              <li><a href="https://www.charitywater.org/fundraise">Give to a Fundraiser</a></li>
+              <li><a href="https://www.charitywater.org/donate/in-honor-of">Give in Someone's Honor</a></li>
+              <li><a href="https://www.charitywater.org/donate/water-project-sponsorship">Sponsor a community</a></li>
+              <li><a href="https://www.charitywater.org/the-tributary">Legacy Giving</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Get Involved</h4>
+            <ul>
+              <li><a href="https://www.charitywater.org/account/register">Create an account</a></li>
+              <li><a href="https://www.charitywater.org/fundraise">Fundraise</a></li>
+              <li><a href="https://www.charitywater.org/tiny-heroes">Tiny Heroes</a></li>
+              <li><a href="https://www.charitywater.org/get-involved/kids">Students &amp; Teachers</a></li>
+              <li><a href="https://www.charitywater.org/streamers">Stream for us</a></li>
+              <li><a href="https://www.charitywater.org/experience">Experience Lab</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Get to know us</h4>
+            <ul>
+              <li><a href="https://www.charitywater.org/our-work">Our Work</a></li>
+              <li><a href="https://www.charitywater.org/our-approach/100-percent-model/">100% Model</a></li>
+              <li><a href="https://www.charitywater.org/about/financials">See Our Financials</a></li>
+              <li><a href="https://www.charitywater.org/thebeginning">Meet the founder</a></li>
+              <li><a href="https://www.charitywater.org/about/jobs">Careers</a></li>
+            </ul>
+          </div>
+          <div class="footer-links-col">
+            <h4>Connect</h4>
+            <ul>
+              <li><a href="https://www.charitywater.org/contact">Contact Us</a></li>
+              <li><a href="https://support.charitywater.org/hc/en-us">Help center</a></li>
+              <li><a href="https://www.charitywater.org/about/request-speaker">Request a Speaker</a></li>
+              <li><a href="https://www.charitywater.org/partnerships">Brand Partnerships</a></li>
+              <li><a href="https://store.charitywater.org/" target="_blank" rel="noopener noreferrer">Shop our store</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-row">
+        <p class="footer-copy">© 2025 | charity: water</p>
+        <a class="footer-policy" href="https://www.charitywater.org/privacy">Privacy policy</a>
+        <span class="footer-fine-print">charity: water is a 501(c)(3) nonprofit organization. 100% of public donations go directly to fund clean water projects.</span>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

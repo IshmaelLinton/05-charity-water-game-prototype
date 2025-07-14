@@ -1,3 +1,396 @@
+/* Charity: water style footer */
+.cw-footer {
+  background: #fff;
+  border-top: 2px solid #cbccd1;
+  color: #333;
+  text-align: center;
+  padding: 2em 0 1em 0;
+  font-size: 1em;
+  margin-top: 2em;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.footer-content {
+
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+.footer-top-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2em;
+  margin-bottom: 1.5em;
+}
+
+/* On screens 900px and below, stack columns vertically */
+@media (max-width: 900px) {
+  .footer-top-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2em;
+  }
+  .footer-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5em;
+  }
+  .footer-links-col {
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  .footer-newsletter {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.footer-newsletter {
+  flex: 1 1 300px;
+  min-width: 220px;
+  max-width: 350px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-heading {
+  font-size: 1.2em;
+  margin-bottom: 0.2em;
+  color: #222;
+}
+
+.footer-sub {
+  font-size: 1em;
+  margin-bottom: 0.7em;
+  color: #555;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1em 0 0.5em 0;
+}
+
+.footer-form input {
+  padding: 0.5em;
+  border: 1px solid #cbccd1;
+  border-radius: 0.3em;
+  font-size: 1em;
+}
+
+.footer-form button {
+  background-color: #FFC907;
+  color: #222;
+  border: none;
+  padding: 0.7em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.footer-form button:hover {
+  background-color: #ffe066;
+}
+
+.footer-disclaimer {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 0.5em;
+}
+
+.footer-links {
+  display: flex;
+  flex: 3 1 600px;
+  justify-content: space-between;
+  gap: 1.5em;
+  flex-wrap: wrap;
+}
+
+.footer-links-col {
+  min-width: 160px;
+  flex: 1 1 0;
+  text-align: left;
+}
+
+.footer-links-col h4 {
+  font-size: 1.1em;
+  margin-bottom: 0.3em;
+  color: #159A48;
+}
+
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-col li {
+  margin-bottom: 0.3em;
+}
+
+.footer-links-col a {
+  color: #2E9DF7;
+  text-decoration: none;
+  font-size: 1em;
+  transition: color 0.2s;
+}
+
+.footer-links-col a:hover {
+  color: #159A48;
+  text-decoration: underline;
+}
+
+.footer-bottom-row {
+  border-top: 1px solid #eee;
+  margin-top: 1.5em;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.footer-copy {
+  font-size: 0.95em;
+  color: #888;
+}
+
+.footer-policy {
+  color: #2E9DF7;
+  text-decoration: none;
+  font-size: 0.95em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.footer-policy:hover {
+  color: #159A48;
+  text-decoration: underline;
+}
+
+.footer-fine-print {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 0.2em;
+}
+
+@media (max-width: 900px) {
+  .footer-top-row, .footer-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5em;
+  }
+  .footer-links-col {
+    min-width: 0;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+}
+/* Simple Charity: water footer styles */
+.cw-footer {
+  background: #fff;
+  border-top: 2px solid #cbccd1;
+  color: #333;
+  text-align: center;
+  padding: 2em 0 1em 0;
+  font-size: 1em;
+  margin-top: 2em;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.footer-content {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin: 1em 0;
+}
+
+.footer-form input {
+  padding: 0.5em;
+  border: 1px solid #cbccd1;
+  border-radius: 0.3em;
+  font-size: 1em;
+}
+
+.footer-form button {
+  background-color: #FFC907;
+  color: #222;
+  border: none;
+  padding: 0.7em;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.footer-form button:hover {
+  background-color: #ffe066;
+}
+
+.footer-disclaimer {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 0.5em;
+}
+
+.footer-copy {
+  font-size: 0.9em;
+  color: #888;
+  margin-top: 1em;
+}
+/* Difficulty button row styles */
+.difficulty-btn-row {
+  display: flex;
+  justify-content: center;
+  gap: 0.3em;
+  margin: 0.2em 0 0 0; /* Reduced top margin from 0.5em to 0.2em */
+  align-self: flex-end;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 500px) {
+  .difficulty-btn-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+  .difficulty-btn {
+    width: 100%;
+    max-width: 18em;
+    box-sizing: border-box;
+  }
+}
+.difficulty-btn {
+  background-color: #FFC907;
+  color: rgb(26, 26, 26);
+  border: .1em solid #bfa100;
+  padding: .5em 2em;
+  font-size: clamp(1em, 4vw, 1.6em);
+  font-weight: bold;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  box-shadow: 0 0.1em 0.3em 0 rgba(0,0,0,0.08);
+}
+.difficulty-btn:hover, .difficulty-btn.selected {
+  background-color: #ffe066;
+  color: #159A48;
+  border-color: #159A48;
+}
+.win-close-btn {
+  position: absolute;
+  top: 0.7em;
+  right: 0.9em;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.2s;
+  line-height: 1;
+  padding: 0;
+}
+.win-close-btn:hover {
+  color: #F5402C;
+}
+.win-box {
+  position: relative;
+}
+/* Win overlay styles */
+.win-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.247);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  animation: fadeIn 1s;
+}
+
+.win-box {
+  background: #fff;
+  border-radius: 1em;
+  padding: 2em 2.5em 2em 2.5em;
+  box-shadow: 0 0.2em 1.5em 0 rgba(0,0,0,0.25);
+  text-align: center;
+  min-width: 280px;
+  max-width: 95vw;
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 1.2s;
+}
+
+@media (min-width: 600px) {
+  .win-box {
+    min-width: 350px;
+    max-width: 420px;
+  }
+    .win-logo {
+    width: 13em;
+    max-width: 90%;
+}
+}
+
+.win-logo {
+  width: 12em;
+  max-width: 80%;
+  height: auto;
+  margin: 1.2em auto 0.2em auto;
+  display: block;
+}
+
+.win-box h2 {
+  color: #159A48;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  transition: color 0.3s;
+}
+
+.win-box p {
+  color: #333;
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.play-again-btn {
+  background-color: #FFC907;
+  color: rgb(26, 26, 26);
+  border: .1em solid;
+  padding: .7em 2.4em;
+  font-size: 1.0em;
+  font-weight: bold;
+  border-radius: 0.3em;
+  cursor: pointer;
+  display: block;
+  margin: 0em auto .8em;
+  transition: background-color 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 /* Nav Bar Styles */
 
 .navbar {
@@ -9,15 +402,22 @@
   border-bottom: 1.5px solid #cbccd1;
   display: flex;
   align-items: center;
-  padding: 0.5em 1.5em;
+  padding: 1.2em 1.5em;
+
   box-sizing: border-box;
   margin: 0;
   z-index: 1000;
 }
 
 body {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  margin: 0em;
+  padding: 1em;
+  background-color: #fff7e1;
   /* Add padding to prevent content from hiding under the fixed navbar */
   padding-top: 3.5em;
+  /* Add bottom padding for footer height */
+  padding-bottom: 3.5em;
 }
 
 .navbar-logo {
@@ -79,24 +479,72 @@ button,
 }
 
 .container {
-  max-width: 28em;
-  min-width: 22em;
-  margin: 4em auto;
+  max-width: calc(130vh * (21 / 35));
+  min-width: 20em;
+  margin: 7em auto 3em auto; /* Reduced bottom margin from 1em to 0.5em */
   background-color: #77a8bb;
-  padding: .5em;
+  padding: 0;
   border-radius: .6em;
-  /* Very subtle drop shadow for depth */
   box-shadow: 0 .1em .1em 0 rgba(0, 0, 0, 0.336);
+  height: calc(130vw * (35 / 21));
+  max-height: 98vh;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive container for small screens */
+@media (max-width: 800px) {
+  .container {
+    min-width: 0;
+    width: 100%;
+    max-width: 100vw;
+    border-radius: 0;
+    margin: 7em 0 1em 0;
+    padding-left: 0;
+    padding-right: 0;
+    height: auto; /* Let height grow with content */
+    max-height: none;
+    overflow: auto; /* Allow scrolling if needed */
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar {
+    width: 100vw;
+    min-width: 0;
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    min-height: 88em; /* Ensures the container is tall enough for content on large screens */
+  }
 }
 
 h1 {
   text-align: center;
-  font-size: 2.0em;
+  font-size: clamp(2em, 7vw, 5em);
   font-weight: 400; /* Make the font thinner */
-  margin-bottom: .5em;
+  margin-bottom: .0em;
   color: #ffffff;
   font-family: 'Kazimir Text', serif;
   font-style: normal;
+  padding-left: clamp(0.2em, 2vw, 2em);
+  padding-right: clamp(0.2em, 2vw, 2em);
 }
 
 h1 img {
@@ -106,49 +554,161 @@ h1 img {
 }
 
 .game-instructions {
-  font-size: 1.0em;
-  margin-bottom: 1em;
+  font-size: clamp(.5em, 2.5vw, .9em);
+  margin-bottom: .5em;
   text-align: center;
-  color: #ffffff; /* Charity: water blue for emphasis */
+  color: #000000; /* Charity: water blue for emphasis */
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.5;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  padding-left: clamp(0.2em, 2vw, 2em);
+  padding-right: clamp(0.2em, 2vw, 2em);
 }
 
 .stats {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 0.1em; /* Reduced space below stats */
-  margin-left: 3em;
-  margin-right: 3em;
-  padding: .5em 0;
-  border-radius: 0.4em;
+  margin-left: clamp(0.5em, 5vw, 5em);
+  margin-right: clamp(0.5em, 5vw, 5em);
+  padding: clamp(0.2em, 1vw, 0.7em) 0;
+  border-radius: 0.2em;
   background-color: #FFC907;
   color: rgb(26, 26, 26);
   border: .1em solid;
+  font-size: clamp(1em, 2vw, 2em);
 }
 
 .stats p {
   margin: 0;
-  font-size: 0.7em;
+  font-size: clamp(1.1em, 3vw, 1em);
   font-weight: bold;
   color: #333;
+}
+@media (max-width: 800px) {
+  .stats {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    padding: 0.3em 0;
+    font-size: clamp(0.9em, 3vw, 1.2em);
+  }
+  .stats p {
+    font-size: clamp(1em, 4vw, 1.3em);
+  }
+  .game-instructions {
+    font-size: clamp(0.9em, 3vw, 1.1em);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  h1 {
+    font-size: clamp(1.5em, 8vw, 3em);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .container {
+    min-width: 0;
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0;
+    margin: 7em 0 1em 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .game-grid-wrapper {
+    max-width: 100vw;
+    width: 100vw;
+    height: auto;
+    aspect-ratio: 21 / 35;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .difficulty-btn-row {
+    max-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
+/* Wrapper for grid and overlay image */
+.game-grid-wrapper {
+  position: relative;
+  width: auto;
+  height: 70vh;
+  aspect-ratio: 21 / 35;
+  margin: auto;
+  overflow: hidden;
+  max-width: 90vw;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  z-index: 10;
 }
 
 .game-grid {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  width: 21em;
-  height: 35em;
-  margin: 0.1em auto 0.2em auto; /* Less space above and below grid */
-  padding: 0.7em 1em 2em;
-  position: static;         /* Needed for absolute positioning of floating elements */
+  width: 100%;
+  height: 100%;
+  position: relative;
   background-image: url('img/Background.png');
-  background-size: contain;   /* Make the image fit inside the grid area */
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   align-content: center;
-  gap: .2em;                   /* Adds spacing between grid cells */
+  gap: .2em;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+  /* Add space at the bottom for the jerry can */
+  box-sizing: border-box;
+}
+
+.jerr-can-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 22%;
+  height: auto;
+  pointer-events: none;
+  z-index: 5;
+  max-width: 120px;
+  min-width: 40px;
+}
+
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-image: url('img/Background.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-content: center;
+  gap: .2em;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+.jerr-can-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 4%;
+  transform: translateX(-50%);
+  width: 22%;
+  height: auto;
+  pointer-events: none; /* So it doesn't block clicks */
+  z-index: 5;
+  max-width: 120px;
+  min-width: 40px;
 }
 .grid-cell {
   background-color: #00000000;
@@ -168,10 +728,36 @@ h1 img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+/* Wrapper for grid and overlay image */
+.game-grid-wrapper {
+  position: relative;
+  width: 21em;
+  height: 35em;
+  margin: 0.1em auto 0.2em auto;
+  overflow: hidden;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  height: 100%;
+  padding: 0.7em 1em 2em;
+  position: relative;
+  background-image: url('img/Background.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-content: center;
+  gap: .2em;
+}
   width: 4em;
   height: 7em;
   /* Ensure the wrapper is properly centered */
 }
+
+
+/* Water droplet style */
 
 .water-can {
   width: 100%;
@@ -183,9 +769,27 @@ h1 img {
   cursor: pointer;
   border-radius: 0%;
   animation: popUp 6.0s cubic-bezier(0.17, 0.67, 0.34, 2);
-  transform-origin: center; /* Ensure scaling happens from the center */
+  transform-origin: center;
   opacity: 1;
   transition: opacity 0.8s;
+  --size-mult: 1;
+}
+
+/* Dirty droplet style (same size/animation as water-can) */
+.dirty-droplet {
+  width: 100%;
+  height: 100%;
+  background-image: url('img/dirtydroplet.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 0%;
+  animation: popUp 6.0s cubic-bezier(0.17, 0.67, 0.34, 2);
+  transform-origin: center;
+  opacity: 1;
+  transition: opacity 0.8s;
+  --size-mult: 1;
 }
 
 
@@ -193,10 +797,12 @@ h1 img {
 
 @keyframes popUp {
   0% {
-    transform: scale(0.7); /* Start scaling from the center */
+    /* Start scaling from the center, multiplied by --size-mult */
+    transform: scale(calc(0.7 * var(--size-mult, 1)));
   }
   100% {
-    transform: scale(1); /* End scaling at full size */
+    /* End scaling at full size, multiplied by --size-mult */
+    transform: scale(var(--size-mult, 1));
   }
 }
 
@@ -213,4 +819,20 @@ button {
   display: block;
   margin: 0em auto .8em;
   transition: background-color 0.2s;
+}
+
+/* Footer styles */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  background: #fff;
+  border-top: 2px solid #cbccd1;
+  color: #333;
+  text-align: center;
+  padding: 1em 0 1em 0;
+  font-size: 1em;
+  z-index: 1001;
+  box-sizing: border-box;
 }
